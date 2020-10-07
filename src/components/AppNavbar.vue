@@ -24,10 +24,8 @@
     </div>
 
     <!-- tab bar -->
-    <div class="container tab-container">
-      <div class="d-flex flex-row align-items-center">
-        <app-tabs></app-tabs>
-      </div>
+    <div class="container-fluid tab-container">
+      <app-tabs></app-tabs>
     </div>
     <!-- tab bar -->
   </div>
@@ -47,8 +45,7 @@ export default {
 <style lang="scss" scoped>
 .custom-navbar-light {
   max-width: 1920px;
-  widows: 1920px;
-  height: 250px !important;
+  height: 228px !important;
   background: #ffffff !important;
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05);
 }
@@ -66,10 +63,8 @@ export default {
     margin-left: -22px;
   }
 }
-.tab-container{
-  max-width: 700px;
+.tab-container {
+  max-width: 600px;
   padding-top: 30px;
-  // padding-left: 200px;
-  // padding-right: 200px;
 }
 </style>

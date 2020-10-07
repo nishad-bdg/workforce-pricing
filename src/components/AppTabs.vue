@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid">
+  <div class="">
     <div class="d-flex flex-row justify-content-between">
       <div class="tab-header">Remote Talent - Price List</div>
       <div class="">
