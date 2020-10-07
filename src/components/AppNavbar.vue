@@ -1,7 +1,7 @@
 <template>
   <!-- navbar -->
-  <div class="custom-navbar-light align-items-start p-4">
-    <div class="d-flex flex-row justify-content-between">
+  <div class="custom-navbar-light align-items-start">
+    <div class="d-flex flex-row justify-content-between p-4">
       <div class="">
         <a class="navbar-brand" href="#">
           <img src="../assets/images/logo.svg" alt="logo" />

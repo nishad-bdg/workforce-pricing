@@ -1,7 +1,7 @@
 <template>
-  <div class="container-fluid body-container p-3">
+  <div class="container body-container">
     <div class="d-flex flex-column">
-      <div class="custom-support-text my-4">
+      <div class="custom-support-text mt-5 mb-4">
         Customer Support / Telesales / Business Development / Administrators /
         Account Manager
       </div>
@@ -38,6 +38,10 @@ export default {
 <style lang="scss" scoped>
 .body-container {
   max-width: 650px;
+  margin-left: 16rem;
+  @media screen and (max-width: 1263px){
+    margin-left: auto;
+  }
   .custom-support-text {
     font-family: "Noto Sans";
     font-style: normal;

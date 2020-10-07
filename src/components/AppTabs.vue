@@ -11,7 +11,7 @@
     </div>
 
     <!-- tabs -->
-    <div class="d-flex flex-row justify-content-between mt-5">
+    <div class="d-flex flex-row justify-content-between mt-4">
       <nav class="nav">
         <a
           class="nav-link custom-tab"
@@ -50,6 +50,10 @@ $primary-color: #0046fe;
 .tab-container {
   max-width: 650px;
   padding-top: 52px;
+  margin-left: 16rem;
+  @media screen and (max-width: 1263px) {
+    margin-left: auto;
+  }
 }
 .tab-header {
   font-family: "Noto Sans";
