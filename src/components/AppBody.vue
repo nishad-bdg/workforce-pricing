@@ -60,6 +60,7 @@ export default {
     height: 62px !important;
     background: #ffffff;
     box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
+    border-color: transparent;
     border-radius: 5px;
     .custom-card-title {
       font-family: "Noto Sans";
