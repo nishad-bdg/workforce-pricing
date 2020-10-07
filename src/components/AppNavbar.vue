@@ -68,7 +68,7 @@ export default {
 }
 .tab-container{
   padding-top: 30px;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 200px;
+  padding-right: 200px;
 }
 </style>
