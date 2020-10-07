@@ -24,7 +24,7 @@
     </div>
 
     <!-- tab bar -->
-    <div class="container-fluid tab-container">
+    <div class="container tab-container">
       <div class="d-flex flex-row align-items-center">
         <app-tabs></app-tabs>
       </div>
@@ -67,8 +67,9 @@ export default {
   }
 }
 .tab-container{
+  max-width: 700px;
   padding-top: 30px;
-  padding-left: 200px;
-  padding-right: 200px;
+  // padding-left: 200px;
+  // padding-right: 200px;
 }
 </style>

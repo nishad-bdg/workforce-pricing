@@ -20,16 +20,22 @@
           v-for="tab in tabs"
           :key="tab.id"
           :class="[tab.id == currentTab ? 'active' : '']"
-          >{{ tab.title }}</a
+          >{{ tab.title }}
+            
+          </a
         >
       </nav>
+      
     </div>
+   <div class="slider"></div>
     <!-- tabs -->
   </div>
 </template>
 <script>
 export default {
   name: "AppTabs",
+  components: {
+  },
   data() {
     return {
       currentTab: 1,
@@ -44,7 +50,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$primary-color:#0046FE;
+$primary-color: #0046fe;
 .tab-header {
   font-family: "Noto Sans";
   font-style: normal;
@@ -87,5 +93,16 @@ $primary-color:#0046FE;
 }
 .active {
   color: $primary-color !important;
+}
+.slider {
+  position: absolute;
+  width: 91px;
+  height: 4px;
+  background: #0046fe;
+  border-radius: 10px 10px 0px 0px;
+}
+.nav-link{
+  padding-left: 0;
+  padding-right: 20px;
 }
 </style>
