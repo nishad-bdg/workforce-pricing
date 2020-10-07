@@ -24,9 +24,7 @@
     </div>
 
     <!-- tab bar -->
-    <div class="container-fluid tab-container">
-      <app-tabs></app-tabs>
-    </div>
+    <app-tabs></app-tabs>
     <!-- tab bar -->
   </div>
   <!-- navbar -->
@@ -45,7 +43,7 @@ export default {
 <style lang="scss" scoped>
 .custom-navbar-light {
   max-width: 1920px;
-  height: 228px !important;
+  height: 250px !important;
   background: #ffffff !important;
   box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.05);
 }
@@ -62,9 +60,5 @@ export default {
     margin-top: -42px;
     margin-left: -22px;
   }
-}
-.tab-container {
-  max-width: 650px;
-  padding-top: 30px;
 }
 </style>

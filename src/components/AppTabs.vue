@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="container tab-container">
     <div class="d-flex flex-row justify-content-between">
       <div class="tab-header">Remote Talent - Price List</div>
       <div class="">
@@ -21,21 +21,17 @@
           :key="tab.id"
           :class="[tab.id == currentTab ? 'active' : '']"
           >{{ tab.title }}
-            
-          </a
-        >
+        </a>
       </nav>
-      
     </div>
-   <div class="slider"></div>
+    <div class="slider"></div>
     <!-- tabs -->
   </div>
 </template>
 <script>
 export default {
   name: "AppTabs",
-  components: {
-  },
+  components: {},
   data() {
     return {
       currentTab: 1,
@@ -51,6 +47,10 @@ export default {
 
 <style scoped lang="scss">
 $primary-color: #0046fe;
+.tab-container {
+  max-width: 650px;
+  padding-top: 52px;
+}
 .tab-header {
   font-family: "Noto Sans";
   font-style: normal;
@@ -101,7 +101,7 @@ $primary-color: #0046fe;
   background: #0046fe;
   border-radius: 10px 10px 0px 0px;
 }
-.nav-link{
+.nav-link {
   padding-left: 0;
   padding-right: 20px;
 }
