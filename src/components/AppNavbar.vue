@@ -64,7 +64,7 @@ export default {
   }
 }
 .tab-container {
-  max-width: 600px;
+  max-width: 650px;
   padding-top: 30px;
 }
 </style>

@@ -1,9 +1,20 @@
 <template>
-  <div class="container-fluid body-container p-0">
+  <div class="container-fluid body-container p-3">
     <div class="d-flex flex-column">
       <div class="custom-support-text my-4">
         Customer Support / Telesales / Business Development / Administrators /
         Account Manager
+      </div>
+
+      <div class="progress mb-4">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 30%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
       </div>
       <!-- card -->
       <div class="card mb-4" v-for="i in 4" :key="i">
@@ -26,7 +37,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .body-container {
-  max-width: 600px;
+  max-width: 650px;
   .custom-support-text {
     font-family: "Noto Sans";
     font-style: normal;
@@ -34,6 +45,15 @@ export default {
     font-size: 14px;
     line-height: 19px;
     color: #d5d5d6;
+  }
+
+  .progress {
+    width: 550px;
+    height: 3px;
+    background: #EDF2FF;
+    .progress-bar {
+      background: #0046fe;
+    }
   }
   .card {
     width: 550px !important;
