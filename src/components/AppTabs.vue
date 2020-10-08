@@ -24,7 +24,7 @@
             type="button"
             v-for="item in currencies"
             :key="item.id"
-            @click="selectCurrency(item)"
+            @click.prevent="selectCurrency(item)"
           >
             {{ item.title }}
           </button>
@@ -93,7 +93,7 @@ export default {
     },
     selectCurrency(item) {
       this.selectedCurrency = item;
-      this.currencyMenu = false;
+      this.currencyMenu = !this.currencyMenu;
     },
   },
 };
@@ -148,7 +148,7 @@ $primary-color: #0046fe;
   width: 96px;
   background: #ffffff;
   box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
-  border-radius: 0px 0px 5px 5px;
+  border-radius: 0px 0px 5px 5px !important;
 }
 
 .custom-tab {
