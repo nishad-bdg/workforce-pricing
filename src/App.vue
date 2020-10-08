@@ -2,19 +2,17 @@
   <div id="app">
     <div class="container-fluid p-0">
       <app-navbar></app-navbar>
-      <app-body></app-body>
     </div>
   </div>
 </template>
 
 <script>
 import AppNavbar from "@/components/AppNavbar";
-import AppBody from "@/components/AppBody";
+
 export default {
   name: "App",
   components: {
     "app-navbar": AppNavbar,
-    "app-body": AppBody,
   },
 };
 </script>

@@ -2,8 +2,8 @@
   <div class="container tab-container">
     <div class="d-flex flex-row justify-content-between">
       <div class="tab-header">Remote Talent - Price List</div>
-      <div class="">
-        <select class="currency-dropdown form-control">
+      <div class="currency-dropdown">
+        <select class="form-control">
           <option value="usd">USD</option>
           <option value="euro">EURO</option>
         </select>
@@ -16,7 +16,7 @@
         <a
           class="nav-link custom-tab"
           href="#"
-          @click="currentTab = tab.id"
+          @click="tabClick(tab)"
           v-for="tab in tabs"
           :key="tab.id"
           :class="[tab.id == currentTab ? 'active' : '']"
@@ -35,6 +35,7 @@ export default {
   data() {
     return {
       currentTab: 1,
+      currentTabTitle: "Business Support",
       tabs: [
         { id: 1, title: "Business Support", pills: "business-support" },
         { id: 2, title: "Design", pills: "design" },
@@ -42,6 +43,12 @@ export default {
       ],
     };
   },
+  methods:{
+    tabClick(tab){
+      this.currentTab = tab.id;
+      this.currentTabTitle = tab.title;
+    }
+  }
 };
 </script>
 
@@ -64,7 +71,7 @@ $primary-color: #0046fe;
   text-align: center;
   color: #405899;
 }
-.currency-dropdown {
+.currency-dropdown select{
   width: 96px;
   height: 34px !important;
   box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
@@ -84,6 +91,10 @@ $primary-color: #0046fe;
   font-size: 14px;
   line-height: 19px;
   color: #0046fe;
+  overflow: hidden;
+}
+.current-dropdown::-ms-expand {
+    display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
 }
 
 .custom-tab {

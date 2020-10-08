@@ -33,6 +33,7 @@
 <script>
 export default {
   name: "AppBody",
+  
 };
 </script>
 <style lang="scss" scoped>

@@ -1,41 +1,48 @@
 <template>
-  <!-- navbar -->
-  <div class="custom-navbar-light align-items-start">
-    <div class="d-flex flex-row justify-content-between p-4">
-      <div class="">
-        <a class="navbar-brand" href="#">
-          <img src="../assets/images/logo.svg" alt="logo" />
-        </a>
+  <div>
+    <!-- navbar -->
+    <div class="custom-navbar-light align-items-start">
+      <div class="d-flex flex-row justify-content-between p-4">
+        <div class="">
+          <a class="navbar-brand" href="#">
+            <img src="../assets/images/logo.svg" alt="logo" />
+          </a>
+        </div>
+        <div class="" align="right">
+          <a href="#" class="profile-pic">
+            <div>
+              <img
+                class="profile-pic-circle"
+                src="../assets/images/photo.svg"
+                alt=""
+              />
+              <span class="badge badge-pill">
+                <img src="../assets/images/online.svg" alt="" />
+              </span>
+            </div>
+          </a>
+        </div>
       </div>
-      <div class="" align="right">
-        <a href="#" class="profile-pic">
-          <div>
-            <img
-              class="profile-pic-circle"
-              src="../assets/images/photo.svg"
-              alt=""
-            />
-            <span class="badge badge-pill">
-              <img src="../assets/images/online.svg" alt="" />
-            </span>
-          </div>
-        </a>
-      </div>
-    </div>
 
-    <!-- tab bar -->
-    <app-tabs></app-tabs>
-    <!-- tab bar -->
+      <!-- tab bar -->
+      <app-tabs></app-tabs>
+      <!-- tab bar -->
+    </div>
+    <!-- navbar -->
+    <!-- app body -->
+    <app-body></app-body>
+    <!-- app body -->
   </div>
-  <!-- navbar -->
 </template>
 
 <script>
 import AppTabs from "@/components/AppTabs";
+import AppBody from "@/components/AppBody";
 export default {
   name: "AppNavbar",
   components: {
     "app-tabs": AppTabs,
+    "app-body": AppBody,
   },
 };
 </script>
@@ -61,4 +68,6 @@ export default {
     margin-left: -22px;
   }
 }
+
+// app body
 </style>
