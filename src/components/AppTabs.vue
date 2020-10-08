@@ -8,6 +8,7 @@
           class="btn dropdown-toggle-custom"
           type="button"
           @click="currencyMenu = !currencyMenu"
+          id="dropdownMenu"
         >
           <div class="d-flex flex-row justify-content-between">
             <div>{{ selectedCurrency.title }}</div>
@@ -82,6 +83,13 @@ export default {
       ],
     };
   },
+  watch: {
+    currencyMenu(currencyMenu) {
+      if (currencyMenu) {
+        window.addEventListener("click", this.closeIfClickedOutside);
+      }
+    },
+  },
   methods: {
     tabClick(tab) {
       this.$emit("update:currentTabObject", {
@@ -93,8 +101,16 @@ export default {
     },
     selectCurrency(item) {
       this.selectedCurrency = item;
-      this.currencyMenu = !this.currencyMenu;
+      this.currencyMenu = false;
     },
+    //
+    closeIfClickedOutside() {
+      if (!document.getElementById("dropdownMenu").contains(event.target)) {
+        this.currencyMenu = false;
+        window.removeEventListener("click", this.closeIfClickedOutside);
+      }
+    },
+    //
   },
 };
 </script>
