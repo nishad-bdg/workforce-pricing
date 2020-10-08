@@ -23,8 +23,9 @@
       >
         <div class="card-body">
           <div class="d-flex flex-row justify-content-between">
-            <div class="custom-card-title">{{ item.title }}</div>
-            <div class="time">- {{ item.time }}</div>
+            <div class="custom-card-title">
+              {{ item.title }} <span class="ml-3">- {{ item.time }}</span>
+            </div>
             <div class="custom-card-title">Choose candidates</div>
           </div>
         </div>
@@ -81,14 +82,14 @@ export default {
       font-size: 16px;
       line-height: 22px;
       color: #0046fe;
-    }
-    .time {
-      font-family: "Noto Sans";
-      font-style: normal;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 19px;
-      color: #002178;
+      span {
+        font-family: "Noto Sans";
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #002178;
+      }
     }
   }
 }
