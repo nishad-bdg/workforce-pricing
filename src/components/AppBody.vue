@@ -26,7 +26,10 @@
             <div class="custom-card-title">
               {{ item.title }} <span class="ml-3">- {{ item.time }}</span>
             </div>
-            <div class="custom-card-title">Choose candidates</div>
+            <div class="custom-card-title d-sm-flex d-none">Choose candidates</div>
+            <div class="mobile-eye d-sm-none d-flex">
+              <img src="../assets/images/eye.svg" alt="">
+            </div>
           </div>
         </div>
       </div>
@@ -75,6 +78,9 @@ export default {
     box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
     border-color: transparent;
     border-radius: 5px;
+    @media screen and (max-width: 599px){
+      width: 383px !important;
+    }
     .custom-card-title {
       font-family: "Noto Sans";
       font-style: normal;
@@ -82,6 +88,10 @@ export default {
       font-size: 16px;
       line-height: 22px;
       color: #0046fe;
+      @media screen and (max-width: 599px){
+        font-size: 14px;
+        line-height: 19.07px;
+      }
       span {
         font-family: "Noto Sans";
         font-style: normal;
