@@ -23,6 +23,7 @@
           >{{ tab.title }}
         </a>
       </nav>
+      <br>
     </div>
     <div class="slider"></div>
     <!-- tabs -->
@@ -49,6 +50,7 @@ export default {
         id: tab.id,
         title: tab.title,
         breadcrumb: tab.breadcrumb,
+        description: tab.description
       });
     },
   },
