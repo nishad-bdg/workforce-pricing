@@ -2,8 +2,7 @@
   <div class="container body-container">
     <div class="d-flex flex-column">
       <div class="custom-support-text mt-5 mb-4">
-        Customer Support / Telesales / Business Development / Administrators /
-        Account Manager
+        {{currentTabObject.breadcrumb}}
       </div>
 
       <div class="progress mb-4">
@@ -17,11 +16,11 @@
         ></div>
       </div>
       <!-- card -->
-      <div class="card mb-4" v-for="i in 4" :key="i">
+      <div class="card mb-4" v-for="item in currentTabObject.description" :key="item.id">
         <div class="card-body">
           <div class="d-flex flex-row justify-content-between">
-            <div class="custom-card-title">Non-native non-voice Agents</div>
-            <div class="time">- 7.50 / hour</div>
+            <div class="custom-card-title">{{ item.title}}</div>
+            <div class="time">- {{item.time}}</div>
             <div class="custom-card-title">Choose candidates</div>
           </div>
         </div>
@@ -33,6 +32,11 @@
 <script>
 export default {
   name: "AppBody",
+  props:{
+    currentTabObject: {
+      type: Object
+    }
+  }
   
 };
 </script>

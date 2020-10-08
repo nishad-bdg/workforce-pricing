@@ -25,12 +25,15 @@
       </div>
 
       <!-- tab bar -->
-      <app-tabs></app-tabs>
+      <app-tabs
+        :tabs="tabs"
+        :currentTabObject.sync="currentTabObject"
+      ></app-tabs>
       <!-- tab bar -->
     </div>
     <!-- navbar -->
     <!-- app body -->
-    <app-body></app-body>
+    <app-body :currentTabObject.sync="currentTabObject"></app-body>
     <!-- app body -->
   </div>
 </template>
@@ -43,6 +46,104 @@ export default {
   components: {
     "app-tabs": AppTabs,
     "app-body": AppBody,
+  },
+  data() {
+    return {
+      currentTabObject: {
+        id: 1,
+        title: "Business Support",
+        pills: "business-support",
+        breadcrumb:
+          "Customer Support / Telesales / Business Development / Administrators /Account Manager",
+        description: [
+          {
+            id: 1,
+            title: "Non-native non-voice Agents",
+            time: "7.50 / hour",
+          },
+          {
+            id: 2,
+            title: "Non-native non-voice Agents",
+            time: "7.50 / hour",
+          },
+          {
+            id: 3,
+            title: "Non-native non-voice Agents",
+            time: "7.50 / hour",
+          },
+          {
+            id: 4,
+            title: "Non-native non-voice Agents",
+            time: "7.50 / hour",
+          },
+        ],
+      },
+      tabs: [
+        {
+          id: 1,
+          title: "Business Support",
+          pills: "business-support",
+          breadcrumb:
+            "Customer Support / Telesales / Business Development / Administrators /Account Manager",
+        },
+        {
+          id: 2,
+          title: "Design",
+          pills: "design",
+          breadcrumb: "Desgin",
+          description: [
+            {
+              id:5,
+              title: "Graphic Design",
+              time: "7.50 / hour",
+            },
+            {
+              id:6,
+              title: "Non-native non-voice Agents",
+              time: "7.50 / hour",
+            },
+            {
+              id:7,
+              title: "Non-native non-voice Agents",
+              time: "7.50 / hour",
+            },
+            {
+              id:8,
+              title: "Non-native non-voice Agents",
+              time: "7.50 / hour",
+            },
+          ],
+        },
+        {
+          id: 3,
+          title: "Software Development",
+          pills: "software-development",
+          breadcrumb: "Software Development",
+          description: [
+            {
+              id:9,
+              title: "Non-native non-voice Agents",
+              time: "7.50 / hour",
+            },
+            {
+              id: 10,
+              title: "Non-native non-voice Agents",
+              time: "7.50 / hour",
+            },
+            {
+              id:11,
+              title: "Non-native non-voice Agents",
+              time: "7.50 / hour",
+            },
+            {
+              id:12,
+              title: "Non-native non-voice Agents",
+              time: "7.50 / hour",
+            },
+          ],
+        },
+      ],
+    };
   },
 };
 </script>

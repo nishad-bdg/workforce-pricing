@@ -19,7 +19,7 @@
           @click="tabClick(tab)"
           v-for="tab in tabs"
           :key="tab.id"
-          :class="[tab.id == currentTab ? 'active' : '']"
+          :class="[tab.id == currentTabObject.id ? 'active' : '']"
           >{{ tab.title }}
         </a>
       </nav>
@@ -32,23 +32,26 @@
 export default {
   name: "AppTabs",
   components: {},
-  data() {
-    return {
-      currentTab: 1,
-      currentTabTitle: "Business Support",
-      tabs: [
-        { id: 1, title: "Business Support", pills: "business-support" },
-        { id: 2, title: "Design", pills: "design" },
-        { id: 3, title: "Software Development", pills: "software-development" },
-      ],
-    };
+  props: {
+    tabs: {
+      type: Array,
+    },
+    currentTabObject: {
+      type: Object,
+    },
   },
-  methods:{
-    tabClick(tab){
-      this.currentTab = tab.id;
-      this.currentTabTitle = tab.title;
-    }
-  }
+  data() {
+    return {};
+  },
+  methods: {
+    tabClick(tab) {
+      this.$emit("update:currentTabObject", {
+        id: tab.id,
+        title: tab.title,
+        breadcrumb: tab.breadcrumb,
+      });
+    },
+  },
 };
 </script>
 
@@ -71,7 +74,7 @@ $primary-color: #0046fe;
   text-align: center;
   color: #405899;
 }
-.currency-dropdown select{
+.currency-dropdown select {
   width: 96px;
   height: 34px !important;
   box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
@@ -94,7 +97,7 @@ $primary-color: #0046fe;
   overflow: hidden;
 }
 .current-dropdown::-ms-expand {
-    display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+  display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
 }
 
 .custom-tab {
