@@ -1,6 +1,6 @@
 <template>
   <div class="container tab-container">
-    <div class="d-flex flex-row justify-content-between">
+    <div class="d-flex flex-row justify-content-between tab-flex">
       <div class="tab-header">Remote Talent - Price List</div>
       <!-- Dropdown -->
       <div class="dropdown">
@@ -38,7 +38,7 @@
     <div class="d-flex flex-row justify-content-between tab-bar">
       <nav class="nav">
         <a
-          class="nav-link custom-tab mr-4"
+          class="nav-link custom-tab mr-sm-4 mr-2"
           href="#"
           @click="tabClick(tab)"
           v-for="tab in tabs"
@@ -126,8 +126,15 @@ $primary-color: #0046fe;
 }
 .tab-bar {
   margin-top: 57px;
+  @media screen and (max-width: 599px){
+    margin-top: 47px;
+  }
 }
-.tab-header {
+.tab-flex{
+  @media screen and(max-width: 599px){
+    margin-top: 32px;
+  }
+  .tab-header {
   font-family: "Noto Sans";
   font-style: normal;
   font-weight: 600;
@@ -135,6 +142,14 @@ $primary-color: #0046fe;
   line-height: 33px;
   text-align: center;
   color: #405899;
+  @media screen and (max-width: 599px){
+    font-size: 18px;
+    line-height: 24.52px;
+  }
+  @media screen and (max-width: 424px){
+    font-size: 14px;
+  }
+}
 }
 .dropdown-toggle-custom {
   width: 96px;
@@ -175,6 +190,16 @@ $primary-color: #0046fe;
   line-height: 22px;
   text-align: center;
   color: #d5d5d6 !important;
+  overflow: hidden !important;
+  @media screen and (max-width: 599px) {
+    font-size: 14px;
+    line-height: 19.07px;
+  }
+  @media screen and (max-width: 424px){
+    font-size: 12px;
+    margin-right: 8px !important;
+  }
+
 }
 .active {
   color: $primary-color !important;
@@ -198,5 +223,8 @@ $primary-color: #0046fe;
 .nav-link {
   padding-left: 0;
   padding-right: 20px;
+  @media screen and (max-width: 400px){
+    padding-right: 10px;
+  }
 }
 </style>
