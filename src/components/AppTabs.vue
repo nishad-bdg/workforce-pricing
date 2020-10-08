@@ -2,16 +2,40 @@
   <div class="container tab-container">
     <div class="d-flex flex-row justify-content-between">
       <div class="tab-header">Remote Talent - Price List</div>
-      <div class="currency-dropdown">
-        <select class="form-control">
-          <option value="usd">USD</option>
-          <option value="euro">EURO</option>
-        </select>
+      <!-- Dropdown -->
+      <div class="dropdown">
+        <button
+          class="btn dropdown-toggle-custom"
+          type="button"
+          @click="currencyMenu = !currencyMenu"
+        >
+          <div class="d-flex flex-row justify-content-between">
+            <div>{{ selectedCurrency.title }}</div>
+            <img src="../assets/images/dropdown-arrow.svg" alt="" />
+          </div>
+        </button>
+        <div
+          class=""
+          v-show="currencyMenu"
+          aria-labelledby="dropdownMenu2"
+          style="position: absolute"
+        >
+          <button
+            class="dropdown-item btn btn-link"
+            type="button"
+            v-for="item in currencies"
+            :key="item.id"
+            @click="selectCurrency(item)"
+          >
+            {{ item.title }}
+          </button>
+        </div>
       </div>
+      <!-- Dropdown -->
     </div>
 
     <!-- tabs -->
-    <div class="d-flex flex-row justify-content-between mt-4">
+    <div class="d-flex flex-row justify-content-between tab-bar">
       <nav class="nav">
         <a
           class="nav-link custom-tab mr-4"
@@ -46,7 +70,18 @@ export default {
     },
   },
   data() {
-    return {};
+    return {
+      currencyMenu: false,
+      selectedCurrency: { id: 1, title: "USD" },
+      currencies: [
+        { id: 1, title: "USD" },
+        { id: 2, title: "GBP" },
+        { id: 3, title: "AUD" },
+        { id: 4, title: "CAD" },
+        { id: 5, title: "EUR" },
+        { id: 6, title: "NZD" },
+      ],
+    };
   },
   methods: {
     tabClick(tab) {
@@ -57,6 +92,10 @@ export default {
         description: tab.description,
       });
     },
+    selectCurrency(item) {
+      this.selectedCurrency = item;
+      this.currencyMenu = false;
+    },
   },
 };
 </script>
@@ -65,11 +104,13 @@ export default {
 $primary-color: #0046fe;
 .tab-container {
   max-width: 650px;
-  padding-top: 52px;
   margin-left: 16rem;
   @media screen and (max-width: 1263px) {
     margin-left: auto;
   }
+}
+.tab-bar {
+  margin-top: 57px;
 }
 .tab-header {
   font-family: "Noto Sans";
@@ -80,30 +121,28 @@ $primary-color: #0046fe;
   text-align: center;
   color: #405899;
 }
-.currency-dropdown select {
+.dropdown-toggle-custom {
   width: 96px;
   height: 34px !important;
+  background: #ffffff !important;
   box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
   border-radius: 5px;
   border-color: #ffffff;
-  -moz-appearance: none; /* Firefox */
-  -webkit-appearance: none; /* Safari and Chrome */
-  appearance: none;
-  background: transparent;
-  background-image: url("../assets/images/dropdown-arrow.svg");
-  background-repeat: no-repeat;
-  background-position-x: 90%;
-  background-position-y: 13px;
-  font-family: "Noto Sans";
+  font-family: "Noto Sans" !important;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 19px;
   color: #0046fe;
-  overflow: hidden;
 }
-.current-dropdown::-ms-expand {
-  display: none; /* Remove default arrow in Internet Explorer 10 and 11 */
+.dropdown-item {
+  font-family: "Noto Sans" !important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 19px;
+  color: #0046fe;
+  border: none !important;
 }
 
 .custom-tab {
