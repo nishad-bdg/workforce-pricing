@@ -2,7 +2,7 @@
   <div class="container body-container">
     <div class="d-flex flex-column">
       <div class="custom-support-text mt-5 mb-4">
-        {{currentTabObject.breadcrumb}}
+        {{ currentTabObject.breadcrumb }}
       </div>
 
       <div class="progress mb-4">
@@ -16,11 +16,15 @@
         ></div>
       </div>
       <!-- card -->
-      <div class="card mb-4" v-for="item in currentTabObject.description" :key="item.id">
+      <div
+        class="card mb-4"
+        v-for="item in currentTabObject.description"
+        :key="item.id"
+      >
         <div class="card-body">
           <div class="d-flex flex-row justify-content-between">
-            <div class="custom-card-title">{{ item.title}}</div>
-            <div class="time">- {{item.time}}</div>
+            <div class="custom-card-title">{{ item.title }}</div>
+            <div class="time">- {{ item.time }}</div>
             <div class="custom-card-title">Choose candidates</div>
           </div>
         </div>
@@ -32,19 +36,18 @@
 <script>
 export default {
   name: "AppBody",
-  props:{
+  props: {
     currentTabObject: {
-      type: Object
-    }
-  }
-  
+      type: Object,
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 .body-container {
   max-width: 650px;
   margin-left: 16rem;
-  @media screen and (max-width: 1263px){
+  @media screen and (max-width: 1263px) {
     margin-left: auto;
   }
   .custom-support-text {
@@ -59,7 +62,7 @@ export default {
   .progress {
     width: 550px;
     height: 3px;
-    background: #EDF2FF;
+    background: #edf2ff;
     .progress-bar {
       background: #0046fe;
     }

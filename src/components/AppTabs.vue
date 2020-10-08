@@ -21,7 +21,11 @@
           :key="tab.id"
           :class="[tab.id == currentTabObject.id ? 'active' : '']"
           >{{ tab.title }}
-          <div :class="currentTabObject.id == 2 ? 'slider-shrink':'slider' "  v-show="tab.id == currentTabObject.id"></div>
+
+          <div
+            :class="currentTabObject.id == 2 ? 'slider-shrink' : 'slider'"
+            v-show="tab.id == currentTabObject.id"
+          ></div>
         </a>
       </nav>
     </div>
