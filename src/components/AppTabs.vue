@@ -14,18 +14,18 @@
     <div class="d-flex flex-row justify-content-between mt-4">
       <nav class="nav">
         <a
-          class="nav-link custom-tab"
+          class="nav-link custom-tab mr-4"
           href="#"
           @click="tabClick(tab)"
           v-for="tab in tabs"
           :key="tab.id"
           :class="[tab.id == currentTabObject.id ? 'active' : '']"
           >{{ tab.title }}
+          <div :class="currentTabObject.id == 2 ? 'slider-shrink':'slider' "  v-show="tab.id == currentTabObject.id"></div>
         </a>
       </nav>
-      <br>
     </div>
-    <div class="slider"></div>
+
     <!-- tabs -->
   </div>
 </template>
@@ -50,7 +50,7 @@ export default {
         id: tab.id,
         title: tab.title,
         breadcrumb: tab.breadcrumb,
-        description: tab.description
+        description: tab.description,
       });
     },
   },
@@ -119,6 +119,15 @@ $primary-color: #0046fe;
   width: 91px;
   height: 4px;
   background: #0046fe;
+  margin-top: 8px;
+  border-radius: 10px 10px 0px 0px;
+}
+.slider-shrink {
+  position: absolute;
+  width: 44px;
+  height: 4px;
+  background: #0046fe;
+  margin-top: 8px;
   border-radius: 10px 10px 0px 0px;
 }
 .nav-link {
