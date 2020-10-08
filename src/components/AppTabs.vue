@@ -15,10 +15,9 @@
           </div>
         </button>
         <div
-          class=""
+          class="custom-dropdown-menu-item"
           v-show="currencyMenu"
           aria-labelledby="dropdownMenu2"
-          style="position: absolute"
         >
           <button
             class="dropdown-item btn btn-link"
@@ -143,6 +142,13 @@ $primary-color: #0046fe;
   line-height: 19px;
   color: #0046fe;
   border: none !important;
+}
+.custom-dropdown-menu-item {
+  position: absolute;
+  width: 96px;
+  background: #ffffff;
+  box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
+  border-radius: 0px 0px 5px 5px;
 }
 
 .custom-tab {
