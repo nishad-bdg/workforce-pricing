@@ -180,6 +180,7 @@ $primary-color: #0046fe;
   background: #ffffff;
   box-shadow: 0px 20px 100px rgba(0, 43, 156, 0.15);
   border-radius: 0px 0px 5px 5px !important;
+  z-index: 1003;
 }
 
 .custom-tab {
@@ -221,6 +222,7 @@ $primary-color: #0046fe;
 }
 .nav {
   .nav-link {
+    display: inline-block;
     padding-left: 0;
     padding-right: 20px;
     @media screen and (max-width: 400px) {
