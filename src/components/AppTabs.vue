@@ -126,30 +126,30 @@ $primary-color: #0046fe;
 }
 .tab-bar {
   margin-top: 57px;
-  @media screen and (max-width: 599px){
+  @media screen and (max-width: 599px) {
     margin-top: 47px;
   }
 }
-.tab-flex{
-  @media screen and(max-width: 599px){
+.tab-flex {
+  @media screen and(max-width: 599px) {
     margin-top: 32px;
   }
   .tab-header {
-  font-family: "Noto Sans";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 24px;
-  line-height: 33px;
-  text-align: center;
-  color: #405899;
-  @media screen and (max-width: 599px){
-    font-size: 18px;
-    line-height: 24.52px;
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 33px;
+    text-align: center;
+    color: #405899;
+    @media screen and (max-width: 599px) {
+      font-size: 18px;
+      line-height: 24.52px;
+    }
+    @media screen and (max-width: 424px) {
+      font-size: 14px;
+    }
   }
-  @media screen and (max-width: 424px){
-    font-size: 14px;
-  }
-}
 }
 .dropdown-toggle-custom {
   width: 96px;
@@ -195,11 +195,10 @@ $primary-color: #0046fe;
     font-size: 14px;
     line-height: 19.07px;
   }
-  @media screen and (max-width: 424px){
+  @media screen and (max-width: 424px) {
     font-size: 12px;
     margin-right: 8px !important;
   }
-
 }
 .active {
   color: $primary-color !important;
@@ -220,11 +219,13 @@ $primary-color: #0046fe;
   margin-top: 8px;
   border-radius: 10px 10px 0px 0px;
 }
-.nav-link {
-  padding-left: 0;
-  padding-right: 20px;
-  @media screen and (max-width: 400px){
-    padding-right: 10px;
+.nav {
+  .nav-link {
+    padding-left: 0;
+    padding-right: 20px;
+    @media screen and (max-width: 400px) {
+      padding-right: 10px;
+    }
   }
 }
 </style>
