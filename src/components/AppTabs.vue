@@ -120,6 +120,7 @@ $primary-color: #0046fe;
 .tab-container {
   max-width: 650px;
   margin-left: 16rem;
+  margin-top: 19px;
   @media screen and (max-width: 1263px) {
     margin-left: auto;
   }
@@ -173,6 +174,9 @@ $primary-color: #0046fe;
   line-height: 19px;
   color: #0046fe;
   border: none !important;
+  @media screen and (max-width: 599px) {
+    font-size: 12px;
+  }
 }
 .custom-dropdown-menu-item {
   position: absolute;
@@ -222,7 +226,6 @@ $primary-color: #0046fe;
 }
 .nav {
   .nav-link {
-    display: inline-block;
     padding-left: 0;
     padding-right: 20px;
     @media screen and (max-width: 400px) {
