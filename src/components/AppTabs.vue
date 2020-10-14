@@ -225,6 +225,11 @@ $primary-color: #0046fe;
   border-radius: 10px 10px 0px 0px;
 }
 .nav {
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  max-width: 500px;
+  overflow: auto;
+
   .nav-link {
     padding-left: 0;
     padding-right: 20px;
